@@ -1,0 +1,15 @@
+# Create 20 text files with .txt extension
+for i in range(1, 21):filename = f"file{i}.txt"
+ with open(filename, "w") as file:file.write(f"This is file {i}")
+
+# Rename the first 5 files to .yml extension
+for i in range(1, 6):
+    old_filename = f"file{i}.txt"
+    new_filename = f"file{i}.yml"
+    os.rename(old_filename, new_filename)
+
+# Create 20 text files with .txt extension
+for i in {1..20}; do echo "This is file $i" > "file$i.txt"; done
+
+# Rename the first 5 files to .yml extension
+for i in {1..5}; do mv "file$i.txt" "file$i.yml"; done
