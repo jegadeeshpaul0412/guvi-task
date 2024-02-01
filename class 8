@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the current hour
+current_hour=$(date +"%H")
+
+# Display a greeting based on the time of day
+if [ "$current_hour" -ge 0 ] && [ "$current_hour" -lt 12 ]; then
+    echo "Good morning!"
+elif [ "$current_hour" -ge 12 ] && [ "$current_hour" -lt 18 ]; then
+    echo "Good afternoon!"
+else
+    echo "Good evening!"
+fi
