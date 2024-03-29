@@ -1,13 +1,36 @@
+$ cat script1.sh
 #!/bin/bash
 
-# Get the current hour
-current_hour=$(date +"%H")
+# Let's assume we have a variable representing a student's score
+echo "Hello! What's your score?"
+read score
 
-# Display a greeting based on the time of day
-if [ "$current_hour" -ge 0 ] && [ "$current_hour" -lt 12 ]; then
-    echo "Good morning!"
-elif [ "$current_hour" -ge 12 ] && [ "$current_hour" -lt 18 ]; then
-    echo "Good afternoon!"
+# Using if statements with multiple conditions to determine the grade
+if [ "$score" -ge 90 ]; then
+    grade="A"
+elif [ "$score" -ge 80 ]; then
+    grade="B"
+elif [ "$score" -ge 70 ]; then
+    grade="C"
+elif [ "$score" -ge 60 ]; then
+    grade="D"
 else
-    echo "Good evening!"
+    grade="F"
 fi
+
+# Output the grade
+echo "The student's grade is: $grade"
+
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise2 (master)
+$ sh script1.sh
+Hello! What's your score?
+90
+The student's grade is: A
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise2 (master)
+$ sh script1.sh
+Hello! What's your score?
+50
+The student's grade is: F
+
